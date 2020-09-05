@@ -6,27 +6,35 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import Post from './Componenets/Post/Post';
+import Home from './Componenets/Home/Home';
+import NoMatch from './Componenets/NoMatch/NoMatch';
+import PostDetail from './Componenets/PostDetail/PostDetail';
+
 
 
 function App() {
-  const [posts, setPosts] = useState([]);
-
-  useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/posts')
-    .then(res => res.json())
-    .then(data => setPosts(data))
-  }, [])
-
+  
 
   return (
-    <div>
-      <h1>Posts : {posts.length}</h1>
-      {
-        posts.map(post =><Post post={post}></Post>)
-      }
+    
+    <Router>
+      <Switch>
+        <Route path="/home">
+          <Home></Home>
+        </Route>
 
-    </div>
+        <Route path="/post/:postId">
+          <PostDetail></PostDetail>
+        </Route>
+
+        <Route exact path="/">
+          <Home></Home>
+        </Route>
+        <Route path="*">
+          <NoMatch></NoMatch>
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
