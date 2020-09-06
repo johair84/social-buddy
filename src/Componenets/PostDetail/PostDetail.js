@@ -26,10 +26,10 @@ const PostDetail = () => {
     return (
         
         <div>
-            <h3>this is post Details {postId}</h3>
+            
             <h2>{post.title}</h2>
             <p>{post.body}</p> 
-            <p>Total comment {comment.length}</p>
+            <p>Total comment on this post {comment.length}</p>
             <p>Comment here</p>
 
             {

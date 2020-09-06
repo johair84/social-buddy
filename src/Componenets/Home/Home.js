@@ -11,8 +11,10 @@ const Home = () => {
   }, [])
 
     return (
+      
         <div>
-            <h1>Posts : {posts.length}</h1>
+            <h1>Social Buddy</h1>
+            <h3> Total Posts : {posts.length}</h3>
       {
         posts.map(post =><Post post={post}></Post>)
       }

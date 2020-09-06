@@ -1,13 +1,15 @@
 import React from 'react';
+import './Comments.css';
 
 const Comments = (props) => {
     const {name, email, body} = props.comments;
     return (
-        <div>
+        <div className="comment">
             
-            <h4>Name: {name}</h4>
-            <p>Email: {email}</p>
-            <p>Body: {body}</p>
+            
+            <p>User's Email: {email}</p>
+            <h4 className="UserName">{name} comment this</h4>
+            <p>{body}</p>
             
         </div>
     );

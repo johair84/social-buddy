@@ -12,11 +12,12 @@ import PostDetail from './Componenets/PostDetail/PostDetail';
 
 
 
+
+
 function App() {
   
 
   return (
-    
     <Router>
       <Switch>
         <Route path="/home">
@@ -35,6 +36,7 @@ function App() {
         </Route>
       </Switch>
     </Router>
+    
   );
 }
 

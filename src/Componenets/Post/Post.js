@@ -7,7 +7,8 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import {Grid} from '@material-ui/core';
+
+
 
 const useStyles = makeStyles({
   root: {
@@ -22,16 +23,13 @@ const Post = (props) => {
     const {title, id} = props.post;
     const classes = useStyles();
     return (
-        <Grid container>
-            <Grid>
+            
             <Card className={classes.root}>
                 <CardActionArea >
-          
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="h2">
                         {title}
-                        </Typography>
-                        
+                        </Typography>  
                     </CardContent>
                 </CardActionArea>
                 <CardActions>
@@ -40,11 +38,9 @@ const Post = (props) => {
                         See More
                     </Button>
                     </Link>
-          
                 </CardActions>
             </Card>
-            </Grid>
-        </Grid>
+            
         
     );
 };
